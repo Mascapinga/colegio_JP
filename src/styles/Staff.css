@@ -1,0 +1,275 @@
+/* src/styles/Staff.css */
+.staff {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sección de Introducción */
+.intro-section {
+  padding: 40px 20px 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.intro-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-black);
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.intro-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-gold); /* Cambiado de --primary-red a --accent-gold */
+}
+
+.intro-container {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  background-color: var(--base-white);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sección de Categorías */
+.categories-section {
+  margin: 40px 0 60px;
+  padding: 0;
+}
+
+.categories-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.staff-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.staff-card {
+  background: #FFFFFF;
+  padding: 40px 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+  color: var(--dark-gray);
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 220px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--light-gray);
+}
+
+.staff-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.4s ease;
+}
+
+.staff-card.docente::before {
+  background: var(--primary-blue); /* Cambiado de --primary-red a --primary-blue */
+}
+
+.staff-card.administrativo::before {
+  background: var(--primary-blue); /* Cambiado de --dark-red a --primary-blue */
+}
+
+.staff-card.directivo::before {
+  background: var(--primary-blue); /* Cambiado de #a50000 a --primary-blue */
+}
+
+.staff-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(26, 35, 126, 0.15); /* Ajustado para --primary-blue */
+}
+
+.staff-card:hover::before {
+  transform: scaleX(1);
+}
+
+/* Estilos para los iconos */
+.card-icon-container {
+  width: 60px;
+  height: 60px;
+  background-color: var(--base-white); /* Fondo blanco para contraste */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+}
+
+.card-icon-container .card-icon {
+  font-size: 2rem;
+  color: var(--primary-blue) !important; /* Iconos en --primary-blue */
+}
+
+.staff-card:hover .card-icon-container {
+  transform: scale(1.1);
+}
+
+/* Colores específicos por tipo de staff */
+.staff-card.docente .card-icon,
+.staff-card.administrativo .card-icon,
+.staff-card.directivo .card-icon {
+  color: var(--primary-blue); /* Cambiado de --primary-red, --dark-red, #a50000 a --primary-blue */
+}
+
+.staff-card h3 {
+  color: var(--primary-blue); /* Cambiado de --primary-red a --primary-blue */
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.staff-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-blue); /* Cambiado de --primary-red a --primary-blue */
+  border-radius: 1.5px;
+}
+
+.staff-card.docente h3,
+.staff-card.administrativo h3,
+.staff-card.directivo h3 {
+  color: var(--primary-blue); /* Cambiado de --primary-red, --dark-red, #a50000 a --primary-blue */
+}
+
+.staff-card.docente h3::after,
+.staff-card.administrativo h3::after,
+.staff-card.directivo h3::after {
+  background-color: var(--primary-blue); /* Cambiado de --primary-red, --dark-red, #a50000 a --primary-blue */
+}
+
+.staff-card p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+}
+
+/* Añadido: Estilo para enlaces dentro de tarjetas */
+.card-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--primary-blue); /* Color azul por defecto */
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.staff-card:hover .card-link {
+  color: var(--accent-gold); /* Cambia a dorado al hacer hover */
+}
+
+.staff-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.staff-card.docente::after {
+  background: linear-gradient(to right, var(--primary-blue), var(--accent-gold)); /* Cambiado de --primary-red a --primary-blue */
+}
+
+.staff-card.administrativo::after {
+  background: linear-gradient(to right, var(--primary-blue), var(--accent-gold)); /* Cambiado de --dark-red a --primary-blue */
+}
+
+.staff-card.directivo::after {
+  background: linear-gradient(to right, var(--primary-blue), var(--accent-gold)); /* Cambiado de #a50000 a --primary-blue */
+}
+
+.staff-card:hover::after {
+  opacity: 1;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .staff {
+    padding: 50px 15px;
+  }
+  
+  .intro-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .staff {
+    padding: 40px 15px;
+  }
+  
+  .intro-section h2 {
+    font-size: 2rem;
+  }
+  
+  .staff-categories {
+    gap: 30px;
+    margin-top: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .staff-categories {
+    grid-template-columns: 1fr;
+  }
+  
+  .staff-card {
+    padding: 30px 20px;
+    min-height: 180px;
+  }
+  
+  .staff-card h3 {
+    font-size: 1.6rem;
+  }
+  
+  .staff-card p {
+    font-size: 1rem;
+  }
+}

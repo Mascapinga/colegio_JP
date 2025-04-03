@@ -1,0 +1,132 @@
+.community {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sección de Introducción */
+.intro-section {
+  padding: 40px 20px 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.intro-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-black);
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.intro-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-gold);
+}
+
+/* Sección de Eventos */
+.events-section {
+  margin: 40px 0 60px;
+  padding: 0;
+}
+
+.events-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.events-container h3 {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Sección de Blog */
+.blog-section {
+  margin: 40px 0 60px;
+  padding: 0;
+}
+
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-container h3 {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.blog-post {
+  background: var(--off-white); /* Cambiado de #F5F5F5 a --off-white */
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.blog-post h4 {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+}
+
+.blog-post p {
+  font-size: 1rem;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+}
+
+/* Sección de Padres */
+.parents-section {
+  margin: 40px 0 60px;
+  padding: 0;
+}
+
+.parents-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.parents-container h3 {
+  font-size: 1.8rem;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.platform-btn {
+  display: inline-block;
+  background: var(--primary-blue); /* Cambiado de #D4AF37 a --primary-blue */
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.platform-btn:hover {
+  background: var(--accent-gold);
+}

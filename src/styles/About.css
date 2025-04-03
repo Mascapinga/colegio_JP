@@ -1,0 +1,658 @@
+/* Estilos generales */
+.about {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Sección de Introducción */
+.intro-section {
+  padding: 40px 20px 20px;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.intro-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-black);
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.intro-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--accent-gold);
+}
+
+.intro-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px auto;
+  max-width: 800px;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: var(--dark-gray);
+  line-height: 1.6;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Sección de Categorías */
+.categories-section {
+  margin: 40px 0 60px;
+  padding: 0;
+}
+
+.categories-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-categories {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.about-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  width: 300px;
+  text-align: center;
+  text-decoration: none;
+  color: var(--dark-gray);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--light-gray);
+}
+
+/* Línea superior al hacer hover, similar a staff-card */
+.about-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 6px;
+  background: var(--primary-blue);
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  transition: transform 0.4s ease;
+}
+
+.about-card:hover::before {
+  transform: scaleX(1);
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(26, 35, 126, 0.15);
+}
+
+.card-icon-container {
+  width: 60px;
+  height: 60px;
+  background-color: var(--base-white);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 20px;
+  transition: transform 0.3s ease;
+}
+
+.about-card:hover .card-icon-container {
+  transform: scale(1.1);
+}
+
+.card-icon-container .card-icon {
+  font-size: 2rem;
+  color: var(--primary-blue) !important;
+}
+
+.about-card h3 {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 15px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-card h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 3px;
+  background-color: var(--primary-blue);
+  border-radius: 1.5px;
+}
+
+.about-card p {
+  font-size: 1rem;
+  color: var(--dark-gray);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.card-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--primary-blue);
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+/* Línea inferior al hacer hover, similar a staff-card */
+.about-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary-blue), var(--accent-gold));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.about-card:hover::after {
+  opacity: 1;
+}
+
+.about-card:hover .card-link {
+  color: var(--accent-gold);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .categories-container {
+    padding: 25px;
+  }
+
+  .intro-text {
+    max-width: 100%;
+  }
+
+  .about-categories {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .about-card {
+    width: 100%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 576px) {
+  .intro-section h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+  }
+
+  .about-card h3 {
+    font-size: 1.3rem;
+  }
+
+  .about-card p {
+    font-size: 0.9rem;
+  }
+}
+
+/* Estilos para History.js y MissionVision.js */
+.section-container {
+  margin-bottom: 60px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 2rem;
+  color: var(--text-black);
+  margin-bottom: 15px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-divider {
+  width: 100px;
+  height: 3px;
+  background-color: var(--accent-gold);
+  margin: 0 auto;
+  border-radius: 2px;
+}
+
+/* Línea de tiempo */
+.timeline-container {
+  position: relative;
+  padding: 30px 0;
+  margin: 50px 0;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--primary-blue);
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(26, 35, 126, 0.3);
+}
+
+.timeline-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.timeline-item.left .timeline-content {
+  width: 45%;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.timeline-item.right .timeline-content {
+  width: 45%;
+  text-align: left;
+  margin-left: 20px;
+  order: 2;
+}
+
+.timeline-item.left .timeline-carousel-wrapper {
+  width: 45%;
+  order: 2;
+}
+
+.timeline-item.right .timeline-carousel-wrapper {
+  width: 45%;
+  order: 1;
+}
+
+.timeline-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transition: all 0.4s ease;
+  border-left: 4px solid var(--primary-blue);
+}
+
+.timeline-content:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.timeline-year {
+  display: inline-block;
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.timeline-content h3 {
+  font-size: 1.5rem;
+  color: var(--primary-blue);
+  margin: 15px 0;
+  font-weight: 600;
+}
+
+.timeline-content p {
+  font-size: 1.1rem;
+  color: var(--dark-gray);
+  line-height: 1.7;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: var(--primary-blue);
+  border: 4px solid #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  transition: transform 0.3s;
+}
+
+.timeline-item:hover::before {
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+/* Estilos del carrusel de imágenes */
+.timeline-carousel-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.timeline-carousel {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+}
+
+.carousel-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image-container {
+  width: 100%;
+  max-width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.carousel-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s ease;
+  z-index: 2;
+}
+
+.carousel-button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+.carousel-button.prev {
+  left: 10px;
+}
+
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-indicators {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.carousel-dot {
+  width: 10px;
+  height: 10px;
+  background: var(--light-gray);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.carousel-dot.active {
+  background: var(--primary-blue);
+}
+
+.carousel-dot:hover {
+  background: var(--accent-gold);
+}
+
+/* Tarjetas de información */
+.info-card, .info-panel {
+  background: #fff;
+  padding: 20px 25px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover, .info-panel:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.info-card h4 {
+  color: var(--primary-blue);
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.info-panel {
+  padding: 30px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-left: 4px solid var(--primary-blue);
+}
+
+/* Sección de dos columnas */
+.two-column-section {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 60px;
+}
+
+.column {
+  flex: 1;
+}
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Misión, Visión y Valores */
+.mission-vision-section {
+  margin-bottom: 60px;
+}
+
+.mission-vision-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.mission-vision-card {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.mission-vision-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.mission-vision-card h3 {
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.values-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: left;
+}
+
+.values-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+  padding-left: 25px;
+  font-size: 1.1rem;
+}
+
+.values-list li::before {
+  content: "✔";
+  color: var(--accent-gold);
+  position: absolute;
+  left: 0;
+  font-size: 1.2rem;
+}
+
+.values-list li:last-child {
+  border-bottom: none;
+}
+
+/* Compromiso y Futuro */
+.commitment-section {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 40px 20px;
+  border-radius: 12px;
+  margin-bottom: 60px;
+}
+
+.commitment-section h2 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.commitment-section p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive para la línea de tiempo y carrusel */
+@media (max-width: 768px) {
+  .timeline-line {
+    left: 20px;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    width: 100%;
+    text-align: left;
+    margin: 0 0 20px 50px;
+    order: 1;
+  }
+
+  .timeline-item.left .timeline-carousel-wrapper,
+  .timeline-item.right .timeline-carousel-wrapper {
+    width: 100%;
+    margin-left: 50px;
+    order: 2;
+  }
+
+  .timeline-item::before {
+    left: 8px;
+    transform: translateY(-50%);
+  }
+
+  .carousel-image-container {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .timeline-content p {
+    font-size: 1rem;
+  }
+
+  .carousel-image-container {
+    max-width: 250px;
+  }
+
+  .carousel-caption {
+    font-size: 0.8rem;
+  }
+}
